@@ -1,3 +1,5 @@
+# Ejercicio del libro Python Workout
+
 def convertir_a_hexadecimal(datos_entrada):
     try:
         # Convierte los datos de entrada a hexadecimal
