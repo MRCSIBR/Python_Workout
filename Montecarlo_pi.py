@@ -2,7 +2,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def montecarlo_pi_approximation(num_samples):
-    """Approximate Pi using the Monte Carlo method."""
+    """Approximate Pi using the Monte Carlo method.
+    
+    This function uses the Monte Carlo method to approximate the value of Pi. 
+    It generates a specified number of random points in a square and then determines
+    the proportion of points that lie within a circle inscribed in the square. 
+    The approximate value of Pi is then calculated as four times this proportion.
+    The function also plots a scatter plot of the generated points, with points 
+    inside the circle colored in blue and points outside the circle colored in red.
+    """
+    
     # Generate random points
     x = np.random.rand(num_samples) * 2 - 1  # Scale to [-1, 1]
     y = np.random.rand(num_samples) * 2 - 1  # Scale to [-1, 1]
