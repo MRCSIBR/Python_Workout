@@ -1,25 +1,22 @@
-def to_hex(datos_entrada: str) -> str:
+def convertir_entero_a_hexadecimal(entero: int) -> str:
     """
-    Convierte una cadena de caracteres a hexadecimal.
-    """
-    if not isinstance(datos_entrada, str):
-        raise TypeError("La entrada debe ser una cadena de caracteres")
+    Convierte un número entero a hexadecimal.
 
-    try:
-        # Convierte los datos de entrada a hexadecimal
-        hex_chars = [f"{ord(caracter):02x}" for caracter in datos_entrada]
-        salida_hexadecimal = "".join(hex_chars)
-        return salida_hexadecimal
-    except Exception as e:
-        raise ValueError(f"Error al convertir a hexadecimal: {e}")
+    Args:
+        entero (int): El número entero a convertir.
+
+    Returns:
+        str: La representación hexadecimal del número entero.
+    """
+    return hex(entero)[2:]
 
 if __name__ == "__main__":
     # Obtén la entrada del usuario
-    entrada_usuario = input("Ingresa los datos a convertir a hexadecimal: ")
+    entrada_usuario = int(input("Ingresa el número entero a convertir a hexadecimal: "))
 
     # Convierte la entrada a hexadecimal
     try:
-        resultado_hexadecimal = to_hex(entrada_usuario)
+        resultado_hexadecimal = convertir_entero_a_hexadecimal(entrada_usuario)
         print(f"Representación hexadecimal: {resultado_hexadecimal}")
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Ocurrió un error inesperado: {e}")
