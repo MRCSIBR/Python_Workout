@@ -104,3 +104,37 @@ plot_numbers(numbers)
 
 # 10. Mostrar información del DataFrame
 show_df_info(df)
+
+''' Output:
+Minimum: 7
+Maximum: 32
+Average: 18.40
+Median: 18
+Q1: 10, Q3: 25, IQR: 15
+Varianza: 85.84
+Desviación estándar: 9.26
+   Numbers
+0       10
+1       25
+2       18
+3        7
+4       32
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 5 entries, 0 to 4
+Data columns (total 1 columns):
+ #   Column   Non-Null Count  Dtype
+---  ------   --------------  -----
+ 0   Numbers  5 non-null      int64
+dtypes: int64(1)
+memory usage: 172.0 bytes
+None
+         Numbers
+count   5.000000
+mean   18.400000
+std    10.358571
+min     7.000000
+25%    10.000000
+50%    18.000000
+75%    25.000000
+max    32.000000
+'''
