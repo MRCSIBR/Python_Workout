@@ -44,6 +44,7 @@ while count < 5:
 
 # 7. Functions
 def calculate_bmi(weight, height):
+    """Calculates the BMI given weight and height"""
     return weight / (height ** 2)
 
 bmi = calculate_bmi(70, height)
@@ -56,8 +57,8 @@ print(squares)
 # 9. Error Handling
 try:
     result = 10 / 0
-except ZeroDivisionError:
-    print("Cannot divide by zero")
+except ZeroDivisionError as e:
+    print(f"Error: {e}")
 finally:
     print("Operation attempted")
 
@@ -76,3 +77,40 @@ print(random.choice(fruits))
 # 12. Lambda Functions
 multiply = lambda x, y: x * y
 print(multiply(4, 5))
+
+# 13. Map, Filter, Reduce
+numbers = [1, 2, 3, 4, 5]
+double_numbers = list(map(lambda x: x * 2, numbers))
+print(double_numbers)
+
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)
+
+from functools import reduce
+sum_numbers = reduce(lambda x, y: x + y, numbers)
+print(sum_numbers)
+
+# 14. Generators
+def infinite_sequence():
+    num = 0
+    while True:
+        yield num
+        num += 1
+
+gen = infinite_sequence()
+print(next(gen))  # prints 0
+print(next(gen))  # prints 1
+
+# 15. Decorators
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
