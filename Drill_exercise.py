@@ -114,3 +114,5 @@ def say_hello():
     print("Hello!")
 
 say_hello()
+
+# Agregados: Decoradores, Docstrings, formateo PEP8, map filter reduce functions, error handling
