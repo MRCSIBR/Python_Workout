@@ -3,7 +3,12 @@ import numpy as np
 
 def compound_interest(principal, rate, time, n):
     """
+    
     Calculate compound interest
+    
+    Compound Interest Formula:
+    A = P * (1 + r/n)^(n*t)
+    
     principal: initial investment
     rate: annual interest rate (as a decimal)
     time: time in years
